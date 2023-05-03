@@ -1,0 +1,16 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Here are my Projects</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<!--Added code, this foreach loops through our Projects list (IEnumerable) and prints them using H2-->
+@foreach (var project in Model.Projects)
+{
+    <h2>@project.Name</h2>
+}
